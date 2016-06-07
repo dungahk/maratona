@@ -1,2 +1,2 @@
-# maratona
+# Maratona
 Problemas de maratona
