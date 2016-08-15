@@ -1,111 +1,49 @@
 /**
- * Problem: COMCAMEL - Comércio de Camelos
+ * Problem: CALCADMG - Caminhando pela calçada
  * Judge: SPOJ-BR
- * Link: http://br.spoj.com/problems/COMCAMEL/
+ * Link: http://br.spoj.com/problems/CALCADMG/
  * 
  * Author: Emerson Jair
  * Date: 8/11/2016
  */
  
 #include <iostream>
-#include <stack>
+#include <cstdlib>
 
 using namespace std;
 
+long long gcd(long long x, long long y);
+
 int main(int argc, char *argv[]) {
-    long long n, min = 0, max = 0, number;
-    char last;
-    string expression;
-    stack<long long> sumMax, multMax, sumMin, multMin;
+    long long t, a, b, c, d, x, y, mdc, points;
     
-    cin >> n;
+    cin >> t;
     
-    for (int i = 0; i < n; i++) {
-        last = '+';
-        cin >> expression;
-        number = 0;
-        for (int j = 0; j < expression.size(); j++) {
-            if (expression[j] == '+') {
-                // MAX
-                sumMax.push(number);
-                
-                // MIN
-                while (!multMin.empty()) {
-                    number *= multMin.top();
-                    multMin.pop();
-                }
-                sumMin.push(number);
-                
-                // config
-                number = 0;
-                last = '+';
-            }
-            else if (expression[j] == '*') {
-                // MIN
-                multMin.push(number);
-                
-                // MAX
-                while (!sumMax.empty()) {
-                    number += sumMax.top();
-                    sumMax.pop();
-                }
-                multMax.push(number);
-                
-                // config
-                number = 0;
-                last = '*';
-            }
-            else {
-                number = number * 10 + expression[j] - '0';
-            }
+    for (int z = 0; z < t; z++) {
+        points = 0;
+        cin >> a >> b >> c >> d;
+        if (a == c && b == d)
+            points = 1;
+        else {
+            x = abs(c - a);
+            y = abs(d - b);
+            mdc = gcd(x, y);
+            // cout << "mdc" << mdc << endl;
+            // x /= mdc;
+            // y /= mdc;
+            // int j = b;
+            // for (int i = a; i <= c && j <= d;) {
+            //     points++;
+            //     i += x;
+            //     j += y;
+            // }
         }
-        max = min = number;
-        // MAX
-        if (last == '+') {
-            while (!sumMax.empty()) {
-                max += sumMax.top();
-                sumMax.pop();
-            }
-        }
-        
-        while (!multMax.empty()) {
-            max *= multMax.top();
-            multMax.pop();
-        }
-        
-        // MIN
-        if (last == '*') {
-            while (!multMin.empty()) {
-                min *= multMin.top();
-                multMin.pop();
-            }
-        }
-        
-        while (!sumMin.empty()) {
-            min += sumMin.top();
-            sumMin.pop();
-        }
-        
-        
-        
-        cout << "The maximum and minimum are " << max << " and " << min << ".\n";
-        
-        // MAX
-        while (!sumMax.empty()) {
-            sumMax.pop();
-        }
-        while (!multMax.empty()) {
-            multMax.pop();
-        }
-        
-        // MIN
-        while (!sumMin.empty()) {
-            sumMin.pop();
-        }
-        while (!multMin.empty()) {
-            multMin.pop();
-        }
+        cout << mdc + 1 << endl;
     }
     
     return 0;
+}
+
+long long gcd(long long x, long long y) {
+    return y ? gcd(y, x % y) : abs(x);
 }
