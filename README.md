@@ -13,12 +13,13 @@ Problemas de maratona
 
 ## Links para treino:
  - [South America/Brazil First Phase](http://maratona.ime.usp.br/antigas16.html)
- - [Todos os problemas](https://icpcarchive.ecs.baylor.edu/)
+ - [Provas Passadas ICPC](https://icpcarchive.ecs.baylor.edu/)
  - [UVa](https://uva.onlinejudge.org/)
  - [Codeforces](http://codeforces.com/)
  - [TopCoder](https://www.topcoder.com/)
  - [URI Online Judge](https://www.urionlinejudge.com.br/)
  - [SPOJ](https://spoj.com/)
+ - [CodeChef](https://www.codechef.com/)
  - [CodinGame](https://www.codingame.com/)
  - [POJ](http://poj.org/)
  - [A2OJ](https://a2oj.com/)
