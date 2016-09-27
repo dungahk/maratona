@@ -2,13 +2,12 @@
  * Problem: BICHO - Jogo do bicho
  * Judge: SPOJ-BR
  * Link: http://br.spoj.com/problems/BICHO/
- * 
+ *
  * Author: Emerson Jair
  * Date: 8/11/2016
  */
- 
-#include <iostream>
-#include <iomanip>
+
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -17,9 +16,9 @@ int group(int);
 int main(int argc, char *argv[]) {
     int n, m;
     double v, prize;
-    
+
     cin >> v >> n >> m;
-    
+
     while (!(v == 0.0 && n == 0 && m == 0)) {
         if (m % 10000 == n % 10000)
             prize = v * 3000.0;
@@ -31,11 +30,11 @@ int main(int argc, char *argv[]) {
             prize = v * 16.0;
         else
             prize = 0.0;
-        
+
         cout << fixed << setprecision(2) << prize << endl;
         cin >> v >> n >> m;
     }
-    
+
     return 0;
 }
 

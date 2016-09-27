@@ -1,5 +1,4 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -7,9 +6,9 @@ int main(int argc, char *argv[]) {
     long long n, k, j, finalPos;
     vector<long long> instructions;
     string inst;
-    
+
     cin >> n;
-    
+
     for (int z = 0; z < n; z++) {
         cin >> k;
         finalPos = 0;
@@ -30,10 +29,10 @@ int main(int argc, char *argv[]) {
                 instructions[i] = instructions[j - 1];
             }
         }
-        
+
         cout << finalPos << endl;
         instructions.clear();
     }
-    
+
     return 0;
 }

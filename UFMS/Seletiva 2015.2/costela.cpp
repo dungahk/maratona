@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -6,9 +6,9 @@ bool primo(int);
 
 int main(int argc, char *argv[]) {
     int qtd, primos[9][1000], start, end, pos, number;
-    
+
     cin >> qtd;
-    
+
     start = 1;
     end = 9;
     for (int i = 1; i <= qtd; i++) {
@@ -34,30 +34,30 @@ int main(int argc, char *argv[]) {
         start *= 10;
         end = end * 10 + 9;
     }
-    
+
     // for (int i = 1; i <= qtd; i++) {
         for (int j = 0; primos[qtd][j] != -1; j++) {
             cout << primos[qtd][j] << endl;
         }
     // }
-    
+
     return 0;
 }
 
 bool primo(int n) {
     if (n <= 1)
         return false;
-        
+
     if (n == 2)
         return true;
-    
+
     if (n % 2 == 0)
         return false;
-        
+
     for (int i = 3; i * i <= n; i += 2) {
         if (n % i == 0)
             return false;
     }
-    
+
     return true;
 }

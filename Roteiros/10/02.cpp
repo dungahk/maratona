@@ -2,13 +2,12 @@
  * Problem: COMCAMEL - Comércio de Camelos
  * Judge: SPOJ-BR
  * Link: http://br.spoj.com/problems/COMCAMEL/
- * 
+ *
  * Author: Emerson Jair
  * Date: 8/11/2016
  */
- 
-#include <iostream>
-#include <stack>
+
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -17,9 +16,9 @@ int main(int argc, char *argv[]) {
     char last;
     string expression;
     stack<long long> sumMax, multMax, sumMin, multMin;
-    
+
     cin >> n;
-    
+
     for (int i = 0; i < n; i++) {
         last = '+';
         cin >> expression;
@@ -28,14 +27,14 @@ int main(int argc, char *argv[]) {
             if (expression[j] == '+') {
                 // MAX
                 sumMax.push(number);
-                
+
                 // MIN
                 while (!multMin.empty()) {
                     number *= multMin.top();
                     multMin.pop();
                 }
                 sumMin.push(number);
-                
+
                 // config
                 number = 0;
                 last = '+';
@@ -43,14 +42,14 @@ int main(int argc, char *argv[]) {
             else if (expression[j] == '*') {
                 // MIN
                 multMin.push(number);
-                
+
                 // MAX
                 while (!sumMax.empty()) {
                     number += sumMax.top();
                     sumMax.pop();
                 }
                 multMax.push(number);
-                
+
                 // config
                 number = 0;
                 last = '*';
@@ -67,12 +66,12 @@ int main(int argc, char *argv[]) {
                 sumMax.pop();
             }
         }
-        
+
         while (!multMax.empty()) {
             max *= multMax.top();
             multMax.pop();
         }
-        
+
         // MIN
         if (last == '*') {
             while (!multMin.empty()) {
@@ -80,16 +79,16 @@ int main(int argc, char *argv[]) {
                 multMin.pop();
             }
         }
-        
+
         while (!sumMin.empty()) {
             min += sumMin.top();
             sumMin.pop();
         }
-        
-        
-        
+
+
+
         cout << "The maximum and minimum are " << max << " and " << min << ".\n";
-        
+
         // MAX
         while (!sumMax.empty()) {
             sumMax.pop();
@@ -97,7 +96,7 @@ int main(int argc, char *argv[]) {
         while (!multMax.empty()) {
             multMax.pop();
         }
-        
+
         // MIN
         while (!sumMin.empty()) {
             sumMin.pop();
@@ -106,6 +105,6 @@ int main(int argc, char *argv[]) {
             multMin.pop();
         }
     }
-    
+
     return 0;
 }

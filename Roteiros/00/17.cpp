@@ -2,30 +2,30 @@
  * Problem: PAPRIMAS - Palavras primas
  * Judge: SPOJ-BR
  * Link: http://br.spoj.com/problems/PAPRIMAS/
- * 
+ *
  * Author: Emerson Jair
  * Date: 6/9/2016
  */
- 
-#include <iostream>
- 
+
+#include <bits/stdc++.h>
+
 using namespace std;
 
 typedef unsigned long long ULL;
 
 bool prime(ULL);
 ULL strToNum(string);
- 
+
 int main(int argc, char *argv[]) {
     string a;
-    
+
     while (cin >> a) {
         if (prime(strToNum(a)))
             cout << "It is a prime word.\n";
         else
             cout << "It is not a prime word.\n";
     }
-    
+
     return 0;
 }
 

@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -8,12 +6,12 @@ int main(int argc, char *argv[]) {
     long long t, l, c, p, match;
     string aux;
     vector<string> puzzle;
-    
+
     cin >> t;
-    
+
     for (int z = 0; z < t; z++) {
         cin >> l >> c;
-        
+
         for (int i = 0; i < l; i++) {
             cin >> aux;
             puzzle.push_back(aux);
@@ -25,9 +23,9 @@ int main(int argc, char *argv[]) {
             }
             puzzle.push_back(aux);
         }
-        
+
         cin >> p;
-        
+
         for (int i = 0; i < p; i++) {
             cin >> aux;
             match = 0;
@@ -40,11 +38,11 @@ int main(int argc, char *argv[]) {
             }
             if (aux.size() == 1)
                 match /= 2;
-                
+
             cout << match << endl;
         }
         puzzle.clear();
     }
-    
+
     return 0;
 }

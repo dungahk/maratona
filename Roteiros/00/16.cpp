@@ -2,31 +2,29 @@
  * Problem: NUMEROMG - Some dois números
  * Judge: SPOJ-BR
  * Link: http://br.spoj.com/problems/NUMEROMG/
- * 
+ *
  * Author: Emerson Jair
  * Date: 6/9/2016
  */
- 
-#include <iostream>
-#include <cctype>
-#include <cstdlib>
- 
+
+#include <bits/stdc++.h>
+
 using namespace std;
 
 typedef unsigned long long ULL;
 
 string convert10to36(ULL);
 ULL convert36to10(string);
- 
+
 int main(int argc, char *argv[]) {
     string a, b;
-    
+
     while (cin >> a >> b) {
         if (a.size() == 1 && a[0] == '0' && b.size() == 1 && b[0] == '0')
             break;
         cout << convert10to36(convert36to10(a) + convert36to10(b)) << endl;
     }
-    
+
     return 0;
 }
 
@@ -46,7 +44,7 @@ string convert10to36(ULL n) {
     for (int i = aux.size() - 1; i >= 0; i--) {
         num36.push_back(aux[i]);
     }
-    
+
     return num36;
 }
 

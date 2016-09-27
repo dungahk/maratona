@@ -1,6 +1,4 @@
-#include <iostream>
-#include <cstdio>
-#include <cstring>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -18,7 +16,7 @@ void unionset(int x, int y) {
     int a = findset(x), b = findset(y);
     if (a==b)
         return;
-    
+
     P[b] = a;
     L[a] += L[b];
     if (rg==b)
@@ -35,11 +33,11 @@ int main() {
             scanf("%d", L+i);
             P[i] = i;
         }
-        
+
         for(int i=0; i<k; i++) {
             int q, a, b;
             scanf("%d %d %d", &q, &a, &b);
-            
+
             if (q==1)
                 unionset(a, b);
             else {
@@ -56,6 +54,6 @@ int main() {
         }
         cout << rw << endl;
     }
-    
+
     return 0;
 }

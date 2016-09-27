@@ -1,21 +1,20 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
     int n, length, t, grade, maior, best;
     vector<int> v;
-    
+
     cin >> t;
-    
+
     for (int z = 0; z < t; z++) {
         cin >> n;
-        
+
         length = 0;
         maior = -1;
         best = 0;
-        
+
         for (int i = 0; i < n; i++) {
             cin >> grade;
             // cout << grade << " ";
@@ -37,7 +36,7 @@ int main(int argc, char *argv[]) {
             if (grade > maior)
                 maior = grade;
         }
-        
+
         length = 0;
         for (int i = 0; i < n; i++) {
             if (v[i] == maior) {
@@ -49,15 +48,15 @@ int main(int argc, char *argv[]) {
                 length = 0;
             }
         }
-        
+
         if (length > best)
             best = length;
-        
+
         cout << "Caso #" << z + 1 << ": " << best;
         cout << endl;
-        
+
         v.clear();
     }
-    
+
     return 0;
 }

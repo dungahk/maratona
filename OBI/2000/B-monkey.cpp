@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -8,11 +8,11 @@ using namespace std;
 int main(int argc, char *argv[]) {
     long long n, e, f, g, h, x, y, z, w, test = 1;
     bool nenhum;
-    
+
     while (cin >> n, n != 0) {
         cin >> x >> y >> z >> w;
         nenhum = false;
-        
+
         for (int i = 1; i < n; i++) {
             cin >> e >> f >> g >> h;
             if (!nenhum) {
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
             if (x >= z || y <= w)
                 nenhum = true;
         }
-        
+
         cout << "Teste " << test++ << endl;
         if (nenhum)
             cout << "nenhum\n\n";

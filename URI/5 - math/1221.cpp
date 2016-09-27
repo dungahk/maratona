@@ -1,5 +1,4 @@
-#include <iostream>
-#include <math.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -7,9 +6,9 @@ bool prime(long);
 
 int main(void) {
     int n, k;
-    
+
     cin >> n;
-    
+
     for (int i = 0; i < n; i++) {
         cin >> k;
         if (prime(k))
@@ -32,11 +31,11 @@ bool prime(long k) {
         return true;
     if (k % 3 == 0)
         return false;
-        
+
     for (int i = 5; i < raiz; i++) {
         if (k % i++ == 0)
             return false;
     }
-    
+
     return true;
 }

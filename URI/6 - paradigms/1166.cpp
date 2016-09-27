@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <math.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -10,16 +8,16 @@ int main(void) {
     int k, n, number;
     bool fits, encaixou;
     vector<int> pegs;
-    
+
     cin >> k;
-    
+
     for (int z = 0; z < k; z++) {
         cin >> n;
         pegs.assign(n, 0);
-        
+
         fits = true;
         number = 1;
-        
+
         while (fits) {
             encaixou = false;
             for (int i = 0; i < n && !encaixou; i++) {
@@ -35,9 +33,9 @@ int main(void) {
             if (!encaixou)
                 fits = false;
         }
-        
+
         cout << number - 1 << endl;
-        
+
         pegs.clear();
     }
     return 0;

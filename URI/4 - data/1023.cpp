@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <iomanip>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -17,28 +14,28 @@ int main(void) {
     double consumption_per_person;
     vector<casa> cidade;
     casa aux;
-    
+
     // le
     cin >> n;
     while (n != 0) {
         residents = 0;
         consumption = 0;
-        
+
         for (int i = 0; i < n; i++) {
             cin >> a >> b;
             aux.res = a;
             aux.order = b / a;
             cidade.push_back(aux);
-            
+
             residents += a;
             consumption += b;
         }
-        
+
         consumption_per_person = (double) consumption / residents;
-        
+
         //ordena
         sort(cidade.begin(), cidade.end(), compare);
-        
+
         // imprime
         cout << "Cidade# " << ++k << ":\n";
         // lista de orders
@@ -47,10 +44,10 @@ int main(void) {
                 cout << " ";
             int j = i + 1;
             int sum_res = cidade[i].res;
-            
+
             while (j < cidade.size() && cidade[j].order == cidade[i].order)
                 sum_res += cidade[j++].res;
-                
+
             cout << sum_res << "-" << cidade[i].order;
             i = j - 1;
         }
@@ -59,13 +56,13 @@ int main(void) {
         cpp2 = consumption_per_person;
         cpp2 %= 100;
         cout << "\nConsumo medio: " << cpp1 << "." << setfill('0') << setw(2) << cpp2 << " m3.\n";
-        
+
         cin >> n;
         if (n != 0)
             cout << endl;
         cidade.clear();
     }
-    
+
     return 0;
 }
 

@@ -1,5 +1,4 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -10,9 +9,9 @@ int main(void) {
     int n, t, magic_number, k;
     vector<int> times;
     bool impossible;
-    
+
     cin >> n >> t;
-    
+
     while (n != 0 || t != 0) {
         impossible = false;
         for (int i = 0; i < n; i++) {
@@ -22,20 +21,20 @@ int main(void) {
             if (!impossible)
                 times.push_back(k);
         }
-        
+
         if (!impossible)
             magic_number = find(times, t);
-        
+
         if (magic_number == 0)
             impossible = true;
-        
+
         if (impossible)
             cout << "impossivel\n";
         else
             cout << magic_number << endl;
         cin >> n >> t;
     }
-    
+
     return 0;
 }
 

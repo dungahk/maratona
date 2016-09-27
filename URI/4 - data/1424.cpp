@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <map>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -9,7 +7,7 @@ int main(void) {
     map<int,vector<int> > list;
     map<int,vector<int> >::iterator it;
     vector<int> position;
-    
+
     while (cin >> n >> m) {
         for (int i = 0; i < n; i++) {
             cin >> a;
@@ -19,7 +17,7 @@ int main(void) {
             }
             list[a].push_back(i + 1);
         }
-        
+
         for (int i = 0; i < m; i++) {
             cin >> a >> b;
             if (a <= list[b].size())
@@ -27,9 +25,9 @@ int main(void) {
             else
                 cout << 0 << endl;
         }
-        
+
         list.clear();
     }
-    
+
     return 0;
 }
