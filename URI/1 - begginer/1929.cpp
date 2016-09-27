@@ -1,5 +1,4 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -7,12 +6,12 @@ int main(void) {
     int a;
     vector<int> numbers;
     bool triangle = false;
-    
+
     for (int i = 0; i < 4; i++) {
         cin >> a;
         numbers.push_back(a);
     }
-    
+
     for (int i = 0; i < 4 && !triangle; i++) {
         for (int j = 0; j < 4 && !triangle; j++) {
             for (int k = 0; k < 4 && !triangle; k++) {
@@ -22,11 +21,11 @@ int main(void) {
             }
         }
     }
-    
+
     if (triangle)
         cout << "S\n";
     else
         cout << "N\n";
-        
+
     return 0;
 }

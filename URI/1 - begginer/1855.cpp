@@ -1,15 +1,14 @@
-#include <iostream>
-#include <cstdio>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main(void) {
     int n, m, c, i, j, mapa[200][200], dir, visitados[200][200];
     bool valid = true, chest = false;
-    
+
     cin >> m >> n;
     c = getc(stdin);
-    
+
     for (i = 0; i < n; i++) {
         for (j = 0; j < m; j++) {
             mapa[i][j] = getc(stdin);
@@ -31,9 +30,9 @@ int main(void) {
         c = getc(stdin);
         // cout << (char)c;
     }
-    
+
     i = 0; j = 0; dir = 0;
-    
+
     while (valid && !chest) {
         if (visitados[i][j] == 1)
             valid = false;
@@ -50,7 +49,7 @@ int main(void) {
                     dir = 2;
                 else if (mapa[i][j] == 'v')
                     dir = 3;
-                
+
                 if (dir == 0)
                     j++;
                 else if (dir == 1)
@@ -59,13 +58,13 @@ int main(void) {
                     i--;
                 else
                     i++;
-                
+
                 if (j < 0 || j > m || i < 0 || i > n)
                     valid = false;
             }
         }
     }
-    
+
     if (chest)
         cout << "*\n";
     else

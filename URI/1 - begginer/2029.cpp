@@ -1,5 +1,4 @@
-#include <iostream>
-#include <iomanip>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -7,7 +6,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
     double v, d, height, area;
-    
+
     while (cin >> v >> d) {
         area = PI * d * d / 4.0;
         height = v / area;
@@ -16,6 +15,6 @@ int main(int argc, char *argv[]) {
         cout << "AREA = ";
         cout << fixed << setprecision(2) << area << endl;
     }
-    
+
     return 0;
 }

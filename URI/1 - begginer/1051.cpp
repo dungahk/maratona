@@ -1,13 +1,12 @@
-#include <iostream>
-#include <iomanip>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main(void) {
     double salary, tax = 0.0;
-    
+
     cin >> salary;
-    
+
     if (salary > 4500.0) {
         tax += (salary - 4500.0) * 0.28;
         salary = 4500.0;
@@ -24,8 +23,8 @@ int main(void) {
         cout << "Isento";
     else
         cout << "R$ " << fixed << setprecision(2) << tax;
-    
+
     cout << endl;
-    
+
     return 0;
 }
