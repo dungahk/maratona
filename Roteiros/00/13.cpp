@@ -2,19 +2,19 @@
  * Problem: Dangerous Dive
  * Judge: URI Online Judge
  * Link: https://www.urionlinejudge.com.br/judge/en/problems/view/1471
- * 
+ *
  * Author: Emerson Jair
  * Date: 6/9/2016
  */
- 
-#include <iostream>
- 
+
+#include <bits/stdc++.h>
+
 using namespace std;
- 
+
 int main(int argc, char *argv[]) {
     int n, r, a;
     bool v[20000];
-    
+
     while (cin >> n >> r) {
         for (int i = 0; i < n; i++) {
             v[i] = false;
@@ -34,6 +34,6 @@ int main(int argc, char *argv[]) {
             cout << endl;
         }
     }
-    
+
     return 0;
 }

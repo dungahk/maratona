@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <list>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -17,7 +15,7 @@ int main(int argc, char *argv[]) {
     // vector<list<int> > packages;
     vector<bool> installed;
     // list<int> aux;
-    
+
     while (cin >> n1 >> n2 >> d, n1 != 0) {
         zera_matriz();
         n = n1 + n2;
@@ -31,13 +29,13 @@ int main(int argc, char *argv[]) {
             dep[x - 1][y - 1] = 1;
             qtd[x - 1]++;
         }
-        
+
         i = 0;
         while (inst_amount < n) {
             dvd = 2;
             if (i < n1)
                 dvd = 1;
-        
+
             if (!installed[i] && qtd[i] == 0) {
                 installed[i] = true;
                 inst_amount++;
@@ -62,7 +60,7 @@ int main(int argc, char *argv[]) {
                     }
                 }
             }
-            
+
             i = (i + 1) % n;
             dvd_novo = 2;
             if (dvd_novo < n1)
@@ -70,7 +68,7 @@ int main(int argc, char *argv[]) {
             if (dvd != dvd_novo)
                 changes++;
         }
-        
+
         // for (int i = 0; i < n; i++) {
         //     cout << i + 1 << ": ";
         //     for (int j = 0; j < packages[i].size(); j++) {
@@ -80,13 +78,13 @@ int main(int argc, char *argv[]) {
         //     cout << endl;
         // }
         // cout << endl;
-        
+
         // i = 0;
         // while (inst_amount < n) {
         //     dvd = 2;
         //     if (i < n1)
         //         dvd = 1;
-            
+
         //     if (packages[i].size() == 0 && !installed[i]) {
         //         installed[i] = true;
         //         inst_amount++;
@@ -119,7 +117,7 @@ int main(int argc, char *argv[]) {
         //     if (dvd != dvd_novo)
         //         changes++;
         // }
-        
+
         // cout << "\n\nINSTALLED\n";
         // for (int i = 0; i < n; i++) {
         //     if (installed[i])
@@ -127,7 +125,7 @@ int main(int argc, char *argv[]) {
         //     else
         //         cout << "Package " << i + 1 << " not installed\n";
         // }
-        
+
         cout << changes << endl;
         // packages.clear();
         installed.clear();
@@ -141,6 +139,6 @@ void zera_matriz() {
             dep[i][j] = 0;
         }
     }
-    
+
     return;
 }

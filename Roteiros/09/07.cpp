@@ -2,14 +2,12 @@
  * Problem: 11227 - The silver bullet.
  * Judge: UVa Online Judge
  * Link: https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2168
- * 
+ *
  * Author: Emerson Jair
  * Date: 8/10/2016
  */
- 
-#include <iostream>
-#include <vector>
-#include <cmath>
+
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -34,9 +32,9 @@ int main(int argc, char *argv[]) {
     Point aux;
     vector<Point> points;
     Vetor u, v;
-    
+
     cin >> t;
-    
+
     for (int z = 0; z < t; z++) {
         gnus = 0;
         cin >> n;
@@ -47,7 +45,7 @@ int main(int argc, char *argv[]) {
             if(!contains(points, aux))
                 points.push_back(aux);
         }
-        
+
         for (int i = 0; i < points.size(); i++) {
             for (int j = i + 1; j < points.size(); j++) {
                 calcVector(points[i], points[j], &u);
@@ -62,19 +60,19 @@ int main(int argc, char *argv[]) {
                     gnus = maior;
             }
         }
-        
+
         gnus += 2;
-        
+
         if (points.size() == 1)
             cout << "Data set #" << z + 1 << " contains a single gnu.\n";
         else {
             cout << "Data set #" << z + 1 << " contains " << points.size() << " gnus, ";
             cout << "out of which a maximum of " << gnus << " are aligned.\n";
         }
-        
+
         points.clear();
     }
-    
+
     return 0;
 }
 
@@ -96,7 +94,7 @@ bool equalsVetor(Vetor u, Vetor v) {
 
 void calcVector(Point p, Point q, Vetor *v) {
     double norma;
-    
+
     v->i = q.x - p.x;
     v->j = q.y - p.y;
     norma = sqrt(v->i * v->i + v->j * v->j);

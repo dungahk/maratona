@@ -1,5 +1,4 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -8,12 +7,12 @@ using namespace std;
 int main(int argc, char *argv[]) {
     long long n, caso = 1;
     vector<long long> seq;
-    
+
     seq.push_back(1);
     for (int i = 1; i < MAX; i++) {
         seq.push_back(seq[i - 1] + i);
     }
-    
+
     while (cin >> n) {
         if (n == 0) {
             cout << "Caso " << caso++ << ": 1 numero" << endl;

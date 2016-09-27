@@ -2,19 +2,19 @@
  * Problem: RECUPERA - Recuperação
  * Judge: SPOJ-BR
  * Link: http://br.spoj.com/problems/RECUPERA/
- * 
+ *
  * Author: Emerson Jair
  * Date: 6/9/2016
  */
- 
-#include <iostream>
- 
+
+#include <bits/stdc++.h>
+
 using namespace std;
- 
+
 int main(int argc, char *argv[]) {
     int n, a, sum, inst = 1, num;
     bool achei;
-    
+
     while (cin >> n) {
         sum = 0;
         achei = false;
@@ -32,6 +32,6 @@ int main(int argc, char *argv[]) {
         else
             cout << "nao achei\n\n";
     }
-    
+
     return 0;
 }

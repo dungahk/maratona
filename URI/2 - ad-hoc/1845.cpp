@@ -1,12 +1,11 @@
-#include <iostream>
-#include <cstdio>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main(void) {
     char c, d;
     string text;
-    
+
     c = getc(stdin);
     while (c != EOF) {
         if (c == 'S' || c == 's' || c == 'V' || c == 'v' || c == 'J' || c == 'j' || c == 'B' || c == 'b' || c == 'Z' || c == 'z' || c == 'P' || c == 'p' || c == 'X' || c == 'x' || c == 'f' || c == 'F') {
@@ -24,11 +23,11 @@ int main(void) {
         }
         else
             cout << c;
-        
+
         c = getc(stdin);
     }
-    
+
     // cout << endl;
-    
+
     return 0;
 }

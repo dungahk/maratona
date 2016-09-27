@@ -1,11 +1,10 @@
-#include <iostream>
-#include <iomanip>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main(void) {
     int n, k;
-    
+
     while (cin >> n, n != 0) {
         if (n == 1)
             cout << setw(3) << 1 << endl;
@@ -26,6 +25,6 @@ int main(void) {
         }
         cout << endl;
     }
-    
+
     return 0;
 }

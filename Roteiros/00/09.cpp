@@ -2,20 +2,20 @@
  * Problem: Coordinates of a Point
  * Judge: URI Online Judge
  * Link: https://www.urionlinejudge.com.br/judge/en/problems/view/1041
- * 
+ *
  * Author: Emerson Jair
  * Date: 6/7/2016
  */
- 
-#include <iostream>
- 
+
+#include <bits/stdc++.h>
+
 using namespace std;
- 
+
 int main(int argc, char *argv[]) {
     double x, y;
-    
+
     cin >> x >> y;
-    
+
     if (x == 0) {
         if (y == 0)
             cout << "Origem\n";
@@ -37,6 +37,6 @@ int main(int argc, char *argv[]) {
         else
             cout << "Q3\n";
     }
-    
+
     return 0;
 }

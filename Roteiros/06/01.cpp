@@ -2,13 +2,12 @@
  * Problem: CONTAGEM - Não é Mais um Joguinho Canadense
  * Judge: SPOJ-BR
  * Link: http://br.spoj.com/problems/CONTAGEM/
- * 
+ *
  * Author: Emerson Jair
  * Date: 7/18/2016
  */
- 
-#include <iostream>
-#include <cmath>
+
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -17,12 +16,12 @@ long long contagem(string);
 int main(int argc, char *argv[]) {
     int instance = 0;
     string palavra;
-    
+
     while (cin >> palavra) {
         cout << "Palavra " << ++instance << endl;
         cout << contagem(palavra) << endl << endl;
     }
-    
+
     return 0;
 }
 

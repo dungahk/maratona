@@ -1,5 +1,4 @@
-#include <iostream>
-#include <cstdio>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -10,9 +9,9 @@ void print(int matrix[10][10], int n, int m);
 int main(void) {
     int n, m, c, min_click;
     int cor[10][10];
-    
+
     cin >> n >> m;
-    
+
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             c = getc(stdin);
@@ -21,12 +20,12 @@ int main(void) {
             cor[i][j] = c - '0';
         }
     }
-    
+
     // print(cor, n, m);
     min_click = 99999;
     paint(cor, n, m, &min_click);
     cout << min_click << endl;
-    
+
     return 0;
 }
 
@@ -36,9 +35,9 @@ void paint(int matrix[10][10], int n, int m, int *min_click) {
             *min_click = clicks;
     }
     else {
-        
+
     }
-    
+
     return;
 }
 
@@ -50,7 +49,7 @@ bool asiatico(int matrix[10][10], int n, int m) {
                 return false;
         }
     }
-    
+
     return true;
 }
 
@@ -61,6 +60,6 @@ void print(int matrix[10][10], int n, int m) {
         }
         cout << endl;
     }
-    
+
     return;
 }

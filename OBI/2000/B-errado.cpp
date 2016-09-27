@@ -1,5 +1,4 @@
-#include <iostream>
-#include <climits>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -10,7 +9,7 @@ bool nenhum;
 while (cin >> n, n != 0) {
     nenhum = false;
     cin >> x >> y >> z >> w;
-    
+
     for (int i = 1; i < n; i++) {
         cin >> e >> f >> g >> h;
         if (!nenhum) {
@@ -39,7 +38,7 @@ while (cin >> n, n != 0) {
                 z = g;
                 w = h;
             }
-            
+
             // 2 pontos
             else if (e >= x && e <= z && f >= w && f <= y && g >= x && g <= z && h <= w) {
                 x = e;
@@ -65,7 +64,7 @@ while (cin >> n, n != 0) {
                 z = g;
                 w = h;
             }
-            
+
             // 4 pontos
             else if (e >= x && e <= z && f >= w && f <= y && g >= x && g <= z && h >= w && h <= y) {
                 x = e;
@@ -73,7 +72,7 @@ while (cin >> n, n != 0) {
                 z = g;
                 w = h;
             }
-            
+
             // 0 pontos
             else if (e <= x && f >= y && g >= z && h <= w) {
                 x = x;
@@ -85,7 +84,7 @@ while (cin >> n, n != 0) {
                 nenhum = true;
         }
     }
-    
+
     cout << "Teste " << test++ << endl;
     if (nenhum)
         cout << "nenhum\n\n";

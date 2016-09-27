@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <cmath>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -13,7 +11,7 @@ int main(void) {
     int n, k, a, number, newL, L, hi, lo, mid;//, M[200][200];
     vector<int> sequence, P, M;
     // stack<int> pilha;
-    
+
     while (cin >> n >> k, n != 0 || k != 0) {
         // zera_matriz(M);
         number = 0;
@@ -21,12 +19,12 @@ int main(void) {
             cin >> a;
             sequence.push_back(a);
         }
-        
+
         P.assign(n, 0);
         M.assign(n + 1, 0);
-        
+
         L = 0;
-        
+
         for (int i = 0; i < n; i++) {
             lo = 1;
             hi = L;
@@ -37,19 +35,19 @@ int main(void) {
                 else
                     hi = mid - 1;
             }
-            
+
             newL = lo;
-            
+
             P[i] = M[newL - 1];
             M[newL] = i;
-            
+
             if (newL == k)
                 number++;
-            
+
             if (newL > L)
                 L = newL;
         }
-        
+
         // for (int i = 0; i < n; i++) {
         //     pilha.push(i);
         //     for (int j = i + 1; j < n; j++) {
@@ -69,14 +67,14 @@ int main(void) {
         //     while (!pilha.empty())
         //         pilha.pop();
         // }
-        
+
         sequence.clear();
         // print_matriz(M, n);
         // while (!pilha.empty())
         //         pilha.pop();
-        
+
         cout << number << " L: " << L << endl;
-        
+
     }
     return 0;
 }
@@ -87,7 +85,7 @@ int main(void) {
 //             M[i][j] = 0;
 //         }
 //     }
-    
+
 //     return;
 // }
 
@@ -98,6 +96,6 @@ int main(void) {
 //         }
 //         cout << endl;
 //     }
-    
+
 //     return;
 // }

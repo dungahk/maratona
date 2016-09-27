@@ -2,24 +2,24 @@
  * Problem: PRIMO - Primo
  * Judge: SPOJ-BR
  * Link: http://br.spoj.com/problems/PRIMO/
- * 
+ *
  * Author: Emerson Jair
  * Date: 6/7/2016
  */
- 
-#include <iostream>
- 
+
+#include <bits/stdc++.h>
+
 using namespace std;
 
 string primo(int);
- 
+
 int main(int argc, char *argv[]) {
     int n;
-    
+
     cin >> n;
-    
+
     cout << primo(n) << endl;
-    
+
     return 0;
 }
 

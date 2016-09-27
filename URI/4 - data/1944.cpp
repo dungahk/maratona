@@ -1,5 +1,4 @@
-#include <iostream>
-#include <string>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -9,7 +8,7 @@ int main (void) {
     int n, gift;
     string text;
     char c;
-    
+
     // while (cin >> n, n != 0) {
     cin >> n;
         text = "FACE";

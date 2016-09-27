@@ -2,17 +2,12 @@
  * Problem: FUTEBOL - Futebol
  * Judge: SPOJ-BR
  * Link: http://br.spoj.com/problems/FUTEBOL/
- * 
+ *
  * Author: Emerson Jair
  * Date: 6/23/2016
  */
- 
-#include <iostream>
-#include <cstdio>
-#include <vector>
-#include <algorithm>
-#include <iomanip>
-#include <cctype>
+
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -34,7 +29,7 @@ int main(int argc, char *argv[]) {
     string teamsName[MAX_TEAM], teamHome, teamAway, separator;
     vector<team> Teams;
     team teamAux;
-    
+
     while (cin >> teamsNumber >> gamesNumber, teamsNumber != 0) {
         for (int i = 0; i < teamsNumber; i++) {
             cin >> teamAux.name;
@@ -46,7 +41,7 @@ int main(int argc, char *argv[]) {
             teamAux.GD = 0;
             Teams.push_back(teamAux);
         }
-        
+
         for (int i = 0; i < gamesNumber; i++) {
             cin >> teamHome >> scoreHome >> separator >> scoreAway >> teamAway;
             for (int j = 0; j < teamsNumber; j++) {
@@ -61,12 +56,12 @@ int main(int argc, char *argv[]) {
             Teams[indexHome].GF += scoreHome;
             Teams[indexHome].GA += scoreAway;
             Teams[indexHome].GD += scoreHome - scoreAway;
-            
+
             Teams[indexAway].games++;
             Teams[indexAway].GF += scoreAway;
             Teams[indexAway].GA += scoreHome;
             Teams[indexAway].GD += scoreAway - scoreHome;
-            
+
             if (scoreHome > scoreAway) {
                 Teams[indexHome].points += 3;
             }
@@ -78,17 +73,17 @@ int main(int argc, char *argv[]) {
                 Teams[indexAway].points += 3;
             }
         }
-        
+
         sort(Teams.begin(), Teams.end(), comp);
-        
+
         for (int i = 0; i < teamsNumber; i++) {
             if (i > 0 && Teams[i].points == Teams[i - 1].points && Teams[i].GD == Teams[i - 1].GD && Teams[i].GF == Teams[i - 1].GF)
                 cout << setw(19) << Teams[i].name;
             else
                 cout << setw(2) << i + 1 << ". " << setw(15) << Teams[i].name;
-            cout << " " << setw(3) << Teams[i].points 
-            << " " << setw(3) << Teams[i].games 
-            << " " << setw(3) << Teams[i].GF 
+            cout << " " << setw(3) << Teams[i].points
+            << " " << setw(3) << Teams[i].games
+            << " " << setw(3) << Teams[i].GF
             << " " << setw(3) << Teams[i].GA
             << " " << setw(3) << Teams[i].GD;
             if (Teams[i].games != 0)
