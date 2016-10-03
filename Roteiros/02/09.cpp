@@ -7,9 +7,7 @@
  * Date: 6/23/2016
  */
  
-#include <iostream>
-#include <cstdlib>
- 
+#include <bits/stdc++.h>
 using namespace std;
 
 #define MAX 100

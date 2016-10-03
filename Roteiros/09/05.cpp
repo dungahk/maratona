@@ -7,10 +7,7 @@
  * Date: 8/9/2016
  */
  
-#include <iostream>
-#include <cmath>
-#include <iomanip>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 double degreeToRad(double degree);

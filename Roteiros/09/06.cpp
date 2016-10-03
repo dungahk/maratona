@@ -7,10 +7,7 @@
  * Date: 8/9/2016
  */
  
-#include <iostream>
-#include <cmath>
-#include <cfloat>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 #define MAX 1324

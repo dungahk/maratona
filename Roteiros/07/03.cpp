@@ -7,9 +7,7 @@
  * Date: 7/25/2016
  */
  
-#include <iostream>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 #define MIN(a, b) ((a) < (b) ? (a) : (b))

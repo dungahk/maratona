@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <list>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 #define MAX 100001

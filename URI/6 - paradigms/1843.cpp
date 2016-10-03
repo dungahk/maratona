@@ -1,6 +1,4 @@
-#include <iostream>
-#include <cstdio>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 int paint(int matrix[10][10], int n, int m, int *min_click);

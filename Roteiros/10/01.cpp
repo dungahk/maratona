@@ -7,9 +7,7 @@
  * Date: 8/11/2016
  */
  
-#include <iostream>
-#include <iomanip>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 int group(int);
