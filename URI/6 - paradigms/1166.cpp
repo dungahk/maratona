@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <math.h>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 bool square_number(int);
