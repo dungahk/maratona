@@ -1,12 +1,11 @@
-#include <iostream>
-#include <iomanip>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
     long long n, a;
     double b, c;
-    
+
     while (cin >> n, n != 0) {
         for (int i = 0; i < n; i++) {
             cin >> a >> b >> c;
@@ -15,6 +14,6 @@ int main(int argc, char *argv[]) {
         }
         cout << endl;
     }
-    
+
     return 0;
 }

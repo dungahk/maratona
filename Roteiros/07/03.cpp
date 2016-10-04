@@ -2,13 +2,12 @@
  * Problem: BOTAS - Botas perdidas
  * Judge: SPOJ-BR
  * Link: http://br.spoj.com/problems/BOTAS/
- * 
+ *
  * Author: Emerson Jair
  * Date: 7/25/2016
  */
- 
-#include <iostream>
-#include <vector>
+
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -18,7 +17,7 @@ int main(int argc, char *argv[]) {
     int n, size, pairs;
     char side;
     vector<int> left, right;
-    
+
     while (cin >> n) {
         left.assign(100, 0);
         right.assign(100, 0);
@@ -33,11 +32,11 @@ int main(int argc, char *argv[]) {
         for (int i = 30; i < 61; i++) {
             pairs += MIN(left[i], right[i]);
         }
-        
+
         cout << pairs << endl;
         left.clear();
         right.clear();
     }
-    
+
     return 0;
 }

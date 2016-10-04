@@ -1,6 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -11,7 +9,7 @@ bool compare (int a, int b);
 int main(void) {
     int n, a;
     vector<int> numbers;
-    
+
     cin >> n >> m;
     while (n != 0 || m != 0) {
         for (int i = 0; i < n; i++) {
@@ -19,16 +17,16 @@ int main(void) {
             // cout << "Modulo: " << a % m << endl;
             numbers.push_back(a);
         }
-        
+
         // sorting
         sort(numbers.begin(), numbers.end(), compare);
-        
+
         // output
         cout << n << " " << m << endl;
         for (int i = 0; i < n; i++) {
             cout << numbers[i] << endl;
         }
-        
+
         numbers.clear();
         cin >> n >> m;
     }

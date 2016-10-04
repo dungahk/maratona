@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <string>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -22,9 +19,9 @@ int main(int argc, char *argv[]) {
     vector<team> Teams;
     team aux;
     string name, teamA, teamB;
-    
+
     cin >> t;
-    
+
     for (int z = 0; z < t; z++) {
         cin >> n >> m;
         for (int i = 0; i < n; i++) {
@@ -36,13 +33,13 @@ int main(int argc, char *argv[]) {
         }
         for (int i = 0; i < m; i++) {
             cin >> scoreA >> teamA >> scoreB >> teamB;
-            
+
             idA = find(Teams, teamA);
             idB = find(Teams, teamB);
-            
+
             Teams[idA].goals += scoreA;
             Teams[idB].goals += scoreB;
-            
+
             if (scoreA > scoreB) {
                 Teams[idA].points += 3;
                 Teams[idA].wins += 1;
@@ -56,16 +53,16 @@ int main(int argc, char *argv[]) {
                 Teams[idB].points += 1;
             }
         }
-        
+
         sort(Teams.begin(), Teams.end(), compare);
-        
+
         for (int i = 0; i < n; i++) {
             cout << Teams[i].name << endl;
         }
-        
+
         Teams.clear();
     }
-    
+
     return 0;
 }
 

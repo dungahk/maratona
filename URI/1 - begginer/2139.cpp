@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -6,7 +6,7 @@ long long natal(long long month, long long day);
 
 int main(int argc, char *argv[]) {
     long long day, month;
-    
+
     while (cin >> month >> day) {
         if (month == 12 && day == 25)
             cout << "E natal!" << endl;
@@ -34,11 +34,11 @@ long long natal(long long month, long long day) {
     days[2] = 31;
     days[1] = 29;
     days[0] = 31;
-    
+
     christmas[11] = 25;
     for (int i = 10; i >= 0; i--) {
         christmas[i] = christmas[i + 1] + days[i];
     }
-    
+
     return christmas[month] + days[month - 1] - day;
 }

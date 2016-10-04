@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -25,14 +25,14 @@ main(int, char*[])
           int favor, contra;
           cin >> favor >> contra;
           soma += favor - contra;
-          if (soma < 0) 
+          if (soma < 0)
             {
               de = partida + 1;
               soma = 0;
             }
-          else if (soma > 0 && 
-                   (soma > melhor_soma || 
-                    (soma == melhor_soma && 
+          else if (soma > 0 &&
+                   (soma > melhor_soma ||
+                    (soma == melhor_soma &&
                      partida-de >= melhor_ate-melhor_de)
                     ) )
             {

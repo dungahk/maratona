@@ -1,10 +1,10 @@
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
     int n, alcohol = 0, gasoline = 0, diesel = 0;
-    
+
     while (cin >> n, n != 4) {
         if (n == 1)
             alcohol++;
@@ -17,6 +17,6 @@ int main(int argc, char *argv[]) {
     cout << "Alcool: " << alcohol << endl;
     cout << "Gasolina: " << gasoline << endl;
     cout << "Diesel: " << diesel << endl;
-    
+
     return 0;
 }

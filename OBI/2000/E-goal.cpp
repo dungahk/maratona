@@ -1,6 +1,4 @@
-#include <iostream>
-#include <climits>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -9,7 +7,7 @@ typedef int Number;
 int main(int argc, char *argv[]) {
     Number n, a, b, test = 1, maior, period;
     vector<Number> saldo, sum;
-    
+
     while(cin >> n, n != 0) {
         maior = INT_MIN;
         period = -1;
@@ -17,9 +15,9 @@ int main(int argc, char *argv[]) {
             cin >> a >> b;
             saldo.push_back(a - b);
         }
-        
+
         // terceira tentativa(DP com vetor)
-        
+
         for (int i = 0; i < n; i++) {
             sum.assign(n, 0);
             sum[i] = saldo[i];
@@ -49,9 +47,9 @@ int main(int argc, char *argv[]) {
                 }
             }
         }
-        
+
         // segunda tentativa(DP)
-        
+
         // for (int i = 0; i < n; i++) {
         //     for (int j = i + 1; j < n; j++) {
         //         cout << "xD";
@@ -77,9 +75,9 @@ int main(int argc, char *argv[]) {
         //     cout << endl;
         // }
         // cout << endl;
-        
+
         // primeira tentativa(brute force)
-        
+
         // for (int i = 0; i < n; i++) {
         //     for (int j = i; j < n; j++) {
         //         sum = 0;
@@ -100,13 +98,13 @@ int main(int argc, char *argv[]) {
         //         }
         //     }
         // }
-        
+
         cout << "Teste " << test++ << endl;
         if (maior > 0)
             cout << a << " " << b << endl << endl;
         else
             cout << "nenhum\n\n";
-        
+
         saldo.clear();
     }
     return 0;

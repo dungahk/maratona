@@ -2,13 +2,12 @@
  * Problem: CALCADMG - Caminhando pela calçada
  * Judge: SPOJ-BR
  * Link: http://br.spoj.com/problems/CALCADMG/
- * 
+ *
  * Author: Emerson Jair
  * Date: 8/11/2016
  */
- 
-#include <iostream>
-#include <cstdlib>
+
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -16,9 +15,9 @@ long long gcd(long long x, long long y);
 
 int main(int argc, char *argv[]) {
     long long t, a, b, c, d, x, y, mdc, points;
-    
+
     cin >> t;
-    
+
     for (int z = 0; z < t; z++) {
         points = 0;
         cin >> a >> b >> c >> d;
@@ -40,7 +39,7 @@ int main(int argc, char *argv[]) {
         }
         cout << mdc + 1 << endl;
     }
-    
+
     return 0;
 }
 

@@ -2,19 +2,18 @@
  * Problem: Square Matrix I
  * Judge: URI Online Judge
  * Link: https://www.urionlinejudge.com.br/judge/en/problems/view/1435
- * 
+ *
  * Author: Emerson Jair
  * Date: 6/9/2016
  */
- 
-#include <iostream>
-#include <cstdio>
- 
+
+#include <bits/stdc++.h>
+
 using namespace std;
- 
+
 int main(int argc, char *argv[]) {
     int n, m[200][200], val;
-    
+
     while (cin >> n, n != 0) {
         val = 1;
         for (int k = 0; k < n; k++) {
@@ -35,6 +34,6 @@ int main(int argc, char *argv[]) {
         }
         cout << endl;
     }
-    
+
     return 0;
 }
