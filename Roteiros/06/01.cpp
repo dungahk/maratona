@@ -7,7 +7,7 @@
  * Date: 7/18/2016
  */
  
-#include <iostream>
+#include <bits/stdc++.h>
 #include <cmath>
 
 using namespace std;

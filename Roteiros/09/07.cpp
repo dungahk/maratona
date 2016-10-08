@@ -7,7 +7,7 @@
  * Date: 8/10/2016
  */
  
-#include <iostream>
+#include <bits/stdc++.h>
 #include <vector>
 #include <cmath>
 
