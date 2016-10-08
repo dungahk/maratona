@@ -7,7 +7,7 @@
  * Date: 6/9/2016
  */
  
-#include <iostream>
+#include <bits/stdc++.h>
 #include <cstdio>
  
 using namespace std;

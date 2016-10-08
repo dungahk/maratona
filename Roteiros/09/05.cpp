@@ -7,7 +7,7 @@
  * Date: 8/9/2016
  */
  
-#include <iostream>
+#include <bits/stdc++.h>
 #include <cmath>
 #include <iomanip>
 
