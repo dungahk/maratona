@@ -7,12 +7,7 @@
  * Date: 6/23/2016
  */
  
-#include <iostream>
-#include <cstdio>
-#include <vector>
-#include <algorithm>
-#include <iomanip>
-#include <cctype>
+#include <bits/stdc++.h>
 
 using namespace std;
 
